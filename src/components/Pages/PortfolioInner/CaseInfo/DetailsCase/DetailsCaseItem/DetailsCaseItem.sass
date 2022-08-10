@@ -1,0 +1,34 @@
+.case-details__item
+  display: grid
+  grid-template-columns: 3fr 7fr
+  gap: 20px
+  padding: 30px
+  border-top: 1px solid #dedede
+  +media-breakpoint-down(sm)
+    padding: 25px 0
+  &:nth-child(odd)
+    border-right: 1px solid #dedede
+    +media-breakpoint-down(sm)
+      border-right: none
+  &.case-details__item--odd
+    +media-breakpoint-down(sm)
+      display: none
+  &.case-details__item--materials
+    +media-breakpoint-down(sm)
+      grid-template-columns: 1fr
+      gap: 10px
+
+
+.case-details__item--marker
+  display: block
+  font-size: 14px
+  line-height: 110%
+  font-weight: 500
+  color: #707070
+
+.case-details__item--value
+  display: block
+  font-size: 14px
+  line-height: 110%
+  font-weight: 600
+    

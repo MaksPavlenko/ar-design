@@ -1,0 +1,44 @@
+$icon_width: calc( 60px + (120 - 60) * ((100vw - 320px) / (1440 - 320)))
+$icon_height: calc( 60px + (120 - 60) * ((100vw - 320px) / (1440 - 320)))
+
+  
+.home-services__item
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  +media-breakpoint-down(xs)
+    padding: 20px 0
+    border-bottom: 1px solid #dedede
+    &:first-child
+      border-top: 1px solid #dedede
+
+
+.services-item__icon--wrapper
+  margin-right: 40px
+  @media screen and ( max-width: $page-wrapper )
+    margin-right: calc( 20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)))
+  +media-breakpoint-down(xs)
+    display: none
+
+.services-item__icon
+  display: block
+  width: 120px
+  height: 120px
+  @media screen and ( max-width: $page-wrapper )
+    width: $icon_width
+    height: $icon_height
+
+.services-item__info--title
+  font-size: 28px
+  line-height: 110%
+  font-weight: 600
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 16px + (28 - 16) * ((100vw - 320px) / (1440 - 320)))
+
+.services-item__info--descr
+  font-size: 16px
+  line-height: 120%
+  font-weight: 500
+  color: $gray-600
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 14px + (16 - 14) * ((100vw - 320px) / (1440 - 320)))

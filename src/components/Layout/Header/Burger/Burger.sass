@@ -1,0 +1,65 @@
+/////////// DEFAULT STYLE ///////////
+  
+.burger
+  position: relative
+  width: 40px
+  height: 40px
+  padding: 0
+  pointer-events: auto
+  transition: all .6s ease-in-out
+  transform-origin: 50% 50%
+
+.burger-line
+  position: relative
+  display: block
+  width: 40px
+  height: 1px
+  background: $black
+  transform-origin: 50% 50%
+  transition: all .6s ease-in-out
+  overflow-x: hidden
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 1px
+    background: $gray-300    
+    transition: all .4s ease-in-out
+    transform: translateX(-100%)
+  &--2
+    margin-top: 10px
+    &::after
+      transition-delay: .2s
+
+//////////// OPEN STYLE ///////////
+
+.burger
+  &.is-open
+    &:hover
+      transform: scale(0.7) translateX(-14px)
+      +media-breakpoint-down(md)
+        transform: scale(0.7) translateX(14px)
+    transform: scale(0.6) translateX(-14px)
+    +media-breakpoint-down(md)
+      transform: scale(0.6) translateX(14px)
+    .burger-line
+      &::after
+        background: $black
+        opacity: 0
+    .burger-line--1
+      background: $white
+      transform: translate3d(0, 5px, -1px) rotate(45deg)
+    .burger-line--2
+      background: $white
+      transform: translate3d(0, -6px, -1px) rotate(135deg)
+
+/////////// HOVER STYLE ////////// 
+
+.burger
+  &:hover
+    .burger-line
+      &::after
+        transform: translateX(100%) 
+

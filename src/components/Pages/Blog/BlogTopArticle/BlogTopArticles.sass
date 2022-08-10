@@ -1,0 +1,74 @@
+.blog__main-screen
+  padding: 200px 0 120px
+  +media-breakpoint-down(md)
+    padding: 120px 0 70px 0
+
+.blog__top-image
+  display: grid
+  align-items: center
+  grid-template-columns: 1.3fr 1fr
+  grid-column-gap: 60px
+  position: relative
+  overflow: hidden
+  +media-breakpoint-down(md)
+    grid-template-columns: 1fr
+    align-items: flex-start
+    grid-row-gap: 30px
+
+.blog__top-content
+  display: flex
+  flex-direction: column
+  padding: 100px 0
+  +media-breakpoint-down(md)
+    padding: 0
+
+.blog__top-date
+  font-size: 12px
+  margin-bottom: 30px
+  color: $gray-600
+  letter-spacing: 0.08em
+  text-transform: uppercase
+  +media-breakpoint-down(md)
+    margin-bottom: 20px
+
+.blog__top-title
+  font-size: 34px
+  font-weight: 600
+  line-height: 50px
+  color: $black
+  margin-bottom: 30px
+  white-space: pre-line
+  @media (max-width: 1036px)
+    font-size: 32px
+  +media-breakpoint-down(md)
+    font-size: 18px
+    line-height: 30px
+    margin-bottom: 15px
+    white-space: normal
+
+.blog__top-desc
+  font-size: 16px
+  color: $gray-600
+  line-height: 30px
+  margin-bottom: 30px
+  +media-breakpoint-down(md)
+    font-size: 15px
+    line-height: 25px
+
+.blog__top-wrapper
+  padding: 0
+  +media-breakpoint-down(md)
+    padding: 0 6vw
+
+.blog__top-wrapper--title
+  padding: 0 100px
+  +media-breakpoint-down(md)
+    padding: 0 6vw
+
+.blog__top-article
+  padding: 0 100px
+  +media-breakpoint-down(md)
+    padding: 0
+
+.blog-image
+  height: 100%

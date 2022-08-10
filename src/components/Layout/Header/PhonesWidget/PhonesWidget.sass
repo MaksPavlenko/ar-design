@@ -1,0 +1,36 @@
+@import './PhonesWidgetButton/PhonesWidgetButton'
+@import './PhonesWidgetDrop/PhonesWidgetDrop'
+
+//////////// DEFAULT STYLE ///////////
+
+.phone-widget 
+  pointer-events: auto
+  height: auto
+  // min-width: 208px
+  padding: 0 5px 0 30px
+  position: relative
+  .phone-widget--bg
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    height: 234px
+    background: $black
+    transform: translateY(-100%)
+    transition: all 0.3s cubic-bezier(0.54, 0.01, 0.49, 1)
+
+    
+/////////// SHOW STYLE ////////////
+
+.phone-widget 
+  &.is-show
+    .phone-widget--bg
+      transform: translateY(0)
+    .button-phone__link
+      transform: translateY(-18px)
+    .phone-widget__button-icon
+      &::before
+        border-color: transparent
+    .button-icons__wrapper
+      transform: translateY(-30px)

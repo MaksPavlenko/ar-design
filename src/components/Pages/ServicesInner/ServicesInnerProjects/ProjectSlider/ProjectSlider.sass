@@ -1,0 +1,260 @@
+.project-slider
+  width: 100%
+  max-width: 100%
+  height: 100%
+  min-height: 700px
+  max-height: 700px
+  position: relative
+  margin-top: 100px
+  +media-breakpoint-down(md)
+    margin-top: 30px
+  +media-breakpoint-down(sm)
+    min-height: 550px
+    min-height: 550px
+  +media-breakpoint-down(xs)
+    min-height: 450px
+    min-height: 450px
+
+
+.project-slider--slide
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  display: block
+  transition: transform 700ms cubic-bezier(.73,.01,.5,.99) .3s, opacity 700ms cubic-bezier(.73,.01,.5,.99) .3s, padding 700ms cubic-bezier(.73,.01,.5,.99) 
+  +media-breakpoint-down(sm)
+    flex-direction: column
+  .slide-header
+    width: 100%
+    min-height: 150px
+    padding-bottom: 35px
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    opacity: 0
+    transition: all 400ms cubic-bezier(.73,.01,.5,.99) .3s
+    .slide-header--info
+      .h2
+        font-size: 24px
+        line-height: 34px
+        font-weight: 600
+        text-transform: uppercase
+        color: #202020
+        +media-breakpoint-down(md)
+          font-size: 20px
+          line-height: 30px
+      .slide-descr
+        font-size: 14px
+        line-height: 22px
+        font-weight: 500
+        color: #909090
+    .slide-case
+      font-size: 12px
+      text-transform: uppercase
+      font-weight: 600
+      color: #202020
+      margin: 0
+  .slide-body
+    height: 100%
+    min-height: 550px
+    max-height: 550px
+    width: 100%
+    overflow: hidden
+    +media-breakpoint-down(sm)
+      width: 100%
+      min-height: 400px
+      max-height: 400px
+    +media-breakpoint-down(xs)
+      min-height: 300px
+      max-height: 300px
+    .slider-image
+      width: 100%
+      height: 100%
+      transition: transform 700ms cubic-bezier(.73,.01,.5,.99)
+
+
+
+.project-slider--slide
+  &__previous
+    z-index: 0
+    transform: translateX(-200%)
+    opacity: 0
+    pointer-events: none
+    padding-right: 10%
+  &__left
+    z-index: 1
+    transform: translateX(-100%)
+    padding-right: 10%
+  &__active
+    z-index: 2
+    .slide-header
+      opacity: 1
+  &__right
+    z-index: 1
+    transform: translateX(100%)
+    padding-left: 10%
+  &__next
+    transform: translateX(200%)
+    z-index: 0
+    opacity: 0
+    padding-left: 10%
+    .slide-body
+      .slider-image
+        transform: translateX(20%)
+
+.project-slider--navigation
+  width: 100%
+  margin-top: 70px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  +media-breakpoint-down(md)
+    margin-top: 40px
+  &__left
+    width: 80%
+    +media-breakpoint-down(sm)
+        width: 100%
+    .project-slider--buttons__wrapper
+      width: 65%
+      display: flex
+      align-items: center
+      justify-content: space-between
+      +media-breakpoint-down(sm)
+        width: 100%
+  &__right
+    width: 20%
+    padding-right: 6vw
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +media-breakpoint-down(md)
+        padding-right: 0
+    +media-breakpoint-down(sm)
+        display: none
+
+
+
+
+.slide-header
+  width: 100%
+  .slide-case
+    font-size: 12px
+    letter-spacing: 0.08em
+    text-transform: uppercase
+    font-weight: 600
+    color: #202020
+    width: 60px
+    text-align: right
+    +media-breakpoint-down(sm)
+        display: block
+        margin-bottom: 10px
+  .slide-info
+    margin-top: 40px
+    width: 100%
+    display: flex
+    align-items: stretch
+    justify-content: space-between
+    +media-breakpoint-down(sm)
+        display: none
+    &--item
+      width: 33.33%
+      .info-item--title
+        display: block
+        font-size: 12px
+        line-height: 22px
+        color: #909090
+        font-weight: 500
+      .info-item--value
+        display: block
+        font-size: 14px
+        line-height: 24px
+        color: #202020
+
+.project-slider--buttons
+  display: flex
+  align-items: center
+  justify-content: space-between
+  +media-breakpoint-down(sm)
+    width: 100%
+  .project-slider--button
+    font-size: 0px
+    width: 120px
+    height: 40px
+    display: flex
+    align-items: center
+    padding: 0
+    position: relative
+    svg
+      display: block
+      margin-top: 1px
+      path 
+        transition: all .25s cubic-bezier(1,.02,.42,.53)
+    &[disabled]
+      &::before
+        background: #909090
+      svg
+        path 
+          fill: #909090
+    &:hover
+      &::before
+        width: 50%
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      transform: translate(0, -50%, 0)
+      width: 100%
+      height: 1px
+      background: #202020
+      transition: all 400ms cubic-bezier(.73,.01,.5,.99)
+    &__prev
+      justify-content: flex-start
+      margin-right: 20px
+      &::before
+        left: 2px
+    &__next
+      justify-content: flex-end
+      margin-left: 20px
+      &::before
+        right: 2px
+
+.current-count
+  color: #202020
+  font-size: 13px
+  line-height: 20px
+  display: none
+
+.all-count
+  color: #909090
+  font-size: 13px
+  line-height: 20px
+
+.progress-wrapper
+  position: relative
+  width: 100%
+  height: 1px
+  background: #C2C2C2
+  margin: 0 15px
+  .progress
+    position: absolute
+    top: 0
+    left: 0
+    // width: 25%
+    height: 1px
+    background: #202020
+    transition: width .6s cubic-bezier(1,.02,.42,.53)
+
+.counter-wrapper
+  height: 20px
+  width: 35px
+  overflow-y: hidden
+  .counter-list
+    transition: transform 600ms cubic-bezier(.73,.01,.5,.99) .25s
+    &__item
+      height: 20px
+      line-height: 20px
+      color: #202020
+      font-size: 13px
+

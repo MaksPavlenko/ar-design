@@ -1,0 +1,89 @@
+.catalog-aside__wrapper
+  padding-right: 10%
+  +media-breakpoint-down(md)
+    padding-right: 0
+  .default-button
+    width: 100%
+    margin-top: 20px
+    border: 1px solid #dedede 
+    justify-content: center
+    padding: 30px
+    @media screen and ( max-width: $page-wrapper )
+      padding: calc( 15px + (30 - 15) * ((100vw - 320px) / (1440 - 320)))
+    +media-breakpoint-down(md)
+      margin-top: 0
+    &::before, &::after
+      display: none
+    .default-button__title
+      display: inline-block
+      padding: 0
+      margin: 0
+      vertical-align: middle
+      font-size: 14px
+      line-height: 110%
+      font-weight: 600
+      text-transform: uppercase
+      @media screen and ( max-width: $page-wrapper )
+        font-size: calc( 12px + (14 - 12) * ((100vw - 320px) / (1440 - 320)))
+    .default-button__icon--wrapper
+      width: 12px
+      height: 12px
+      margin-left: 25px
+      @media screen and ( max-width: $page-wrapper )
+        margin-left: calc( 15px + (25 - 15) * ((100vw - 320px) / (1440 - 320)))
+      .accordion-icon
+        display: block
+        width: 12px
+        height: 12px
+        transform: none
+        .icon-line__1
+          width: 12px
+          height: 2px
+        .icon-line__2
+          width: 2px
+          height: 12px
+  
+.catalog-aside__icon--container
+  position: relative
+  width: 100%
+  height: 100%
+  border: 1px solid #dedede
+  // padding: 70px
+  &::after
+    content: ''
+    display: block
+    margin-top: 100%
+  +media-breakpoint-down(md)
+    display: none
+  
+
+
+.catalog-aside__icon--inner
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  padding: 70px
+  @media screen and ( max-width: $page-wrapper )
+    padding: calc( 20px + (70 - 20) * ((100vw - 320px) / (1440 - 320)))
+  
+
+.catalog-aside__icon--wrapper
+  width: 100%
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: $black
+  background-size: cover
+  background-position: center
+
+.catalog-aside__icon
+  display: block
+  width: 90px
+  height: 90px
+  @media screen and ( max-width: $page-wrapper )
+    width: calc( 30px + (90 - 30) * ((100vw - 320px) / (1440 - 320)))
+    height: calc( 30px + (90 - 30) * ((100vw - 320px) / (1440 - 320)))
+  

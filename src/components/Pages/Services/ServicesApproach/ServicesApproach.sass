@@ -1,0 +1,72 @@
+.services__approach
+  padding: 0 14.5vw 200px 14.5vw
+  +media-breakpoint-down(md)
+    padding: 0 6vw 100px 6vw
+
+.services__aproach-items
+  padding-top: 140px
+  +media-breakpoint-down(md)
+    padding-top: 60px
+
+.services__aproach-item
+  display: flex
+  align-items: center
+  justify-content: space-between
+  &:last-child
+    .services__aproach-item__content
+      border-bottom: 1px solid $gray-500
+    
+
+.services__aproach-item__count
+  display: block
+  width: 20%
+  +media-breakpoint-down(md)
+    width: 10%
+  +media-breakpoint-down(sm)
+    display: none
+
+.services__aproach-item__content
+  width: 80%
+  padding: 60px 0
+  display: flex
+  align-items: center
+  justify-content: space-between
+  border-top: 1px solid $gray-500
+  +media-breakpoint-down(md)
+    width: 90%
+  +media-breakpoint-down(sm)
+    width: 100%
+    flex-direction: column
+    justify-content: center
+
+.services__approach-item__content-icon
+  width: 20%
+  +media-breakpoint-down(sm)
+    width: 100%
+    text-align: center
+    margin-bottom: 40px
+
+.services__approach-item__content-info
+  width: 60%
+  +media-breakpoint-down(md)
+    width: 70%
+  +media-breakpoint-down(sm)
+    width: 100%
+    text-align: center
+    padding: 0 6vw
+  +media-breakpoint-down(xs)
+    padding: 0
+  .content-info__title
+    font-size: 28px
+    line-height: 40px
+    font-weight: 600
+    margin-bottom: 20px
+    +media-breakpoint-down(xs)
+      font-size: 24px
+      line-height: 34px
+  .content-info__description
+    font-size: 16px
+    line-height: 30px
+    font-weight: 500
+    color: $gray-600
+  

@@ -1,0 +1,102 @@
+.blog-inner__article
+  padding: 100px 0
+  +media-breakpoint-down(sm)
+    padding: 40px 0
+
+.blog-inner__article-wrapper
+  margin: 0 auto
+  max-width: 1920px
+  width: 100%
+  padding: 0 14.5vw
+  +media-breakpoint-down(md)
+    padding: 0 6vw
+  .h2
+    font-size: 34px
+    line-height: 50px
+    font-weight: 600
+    color: $black
+    max-width: 90%
+    margin-bottom: 60px
+    +media-breakpoint-down(sm)
+      font-size: 18px
+      line-height: 30px
+      margin-bottom: 40px
+  .h3
+    font-size: 24px
+    line-height: 34px
+    font-weight: 600
+    color: $black
+    max-width: 90%
+    margin-bottom: 60px
+    +media-breakpoint-down(sm)
+      font-size: 18px
+      line-height: 30px
+      margin-bottom: 40px
+
+.markdown-components
+  margin-bottom: 120px
+  +media-breakpoint-down(sm)
+    margin-bottom: 70px
+  &:last-of-type
+    margin-bottom: 100px
+    +media-breakpoint-down(sm)
+      margin-bottom: 70px
+  ul
+    margin-bottom: 30px
+    padding-left: 26px
+    +media-breakpoint-down(sm)
+      margin-bottom: 20px
+    li
+      position: relative
+      font-size: 16px
+      padding: 3px 0
+      +media-breakpoint-down(sm)
+        font-size: 15px
+      &::before
+        content: ''
+        position: absolute
+        top: 12px
+        left: -26px
+        width: 6px
+        height: 6px
+        border-radius: 100%
+        background: $black
+        
+  p
+    color: $gray-600
+    font-size: 16px
+    line-height: 30px
+    margin-bottom: 30px
+    +media-breakpoint-down(sm)
+      font-size: 15px
+      line-height: 25px
+      margin-bottom: 20px
+    &:last-of-type
+      margin-bottom: 100px
+      +media-breakpoint-down(sm)
+        margin-bottom: 70px
+  h3
+    font-size: 34px
+    line-height: 50px
+    font-weight: 600
+    color: $black
+    max-width: 90%
+    margin-bottom: 60px
+    +media-breakpoint-down(sm)
+      font-size: 18px
+      line-height: 30px
+      margin-bottom: 40px
+      
+
+.blog-inner__image
+  width: 100%
+  height: auto
+  display: block
+  margin-bottom: 100px
+  +media-breakpoint-down(sm)
+    margin-bottom: 70px
+
+.blog-inner__video-section
+  margin-bottom: 100px
+  +media-breakpoint-down(sm)
+    margin-bottom: 70px

@@ -1,0 +1,101 @@
+.feedback-section
+  display: flex
+  align-items: stretch
+  justify-content: space-between
+  // padding: 0 14.5vw 200px 0
+  // +media-breakpoint-down(md)
+  //   padding: 0 6vw 100px 0
+  // +media-breakpoint-down(sm)
+  //   padding: 0 6vw 70px 6vw
+  // +media-breakpoint-down(xs)
+  //   padding: 40px 6vw 80px 6vw
+  padding-right: 14.5vw !important
+  +media-breakpoint-down(md)
+    padding-right: 6vw !important
+  +media-breakpoint-down(md)
+    padding-left: 6vw !important
+
+
+
+.feedback-image__wrapper
+  position: relative
+  overflow: hidden
+  width: 45%
+  +media-breakpoint-down(sm)
+    display: none
+  .feedback__image
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.feedback-section__content
+  width: 55% 
+  padding: 130px 0 130px 15%
+  +media-breakpoint-down(md)
+    padding: 70px 0 70px 10%
+  +media-breakpoint-down(sm)
+    width: 100%
+    padding: 0 
+
+
+.feedback-messanger
+  margin-top: 90px
+  display: grid
+  grid-template-columns: 6fr 6fr
+  gap: 40px
+  +media-breakpoint-down(md)
+    margin-top: 50px
+  +media-breakpoint-down(xs)
+    margin-top: 30px
+    gap: 30px
+
+.feedback-messanger__item
+  &-link
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 20px 0
+    overflow-x: hidden
+    +media-breakpoint-down(xs)
+      padding: 12px 0 12px 0
+    .messanger-item__link-title
+      font-size: 18px
+      line-height: 1
+      font-weight: 500
+      color: $black
+      +media-breakpoint-down(xs)
+        font-size: 15px
+    svg
+      +media-breakpoint-down(xs)
+        width: 12px
+        height: 12px
+    &::before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 1px
+      background: $black
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 1px
+      background: $gray-300
+      transform: translateX(-100%)
+      transition: transform .6s ease-in-out
+
+.feedback-messanger__item
+  &-link
+    @media (any-hover: hover)
+      &:hover
+        &::after
+          transform: translateX(100%)
+    
+  
+    
+    

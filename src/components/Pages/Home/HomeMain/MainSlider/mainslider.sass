@@ -1,0 +1,334 @@
+.test-slider--wrapper
+  overflow: hidden
+  position: relative
+  .slide-overlay
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: $gray-300
+    z-index: 200
+  
+.test-slider
+  position: relative
+  width: 80%
+  max-width: 80%
+  height: 100%
+  min-height: 400px
+  max-height: 400px
+  +media-breakpoint-down(md)
+    width: 100%
+    min-width: 100%
+  +media-breakpoint-down(sm)
+    max-height: auto
+    min-height: 500px
+
+
+.slider-slide
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  display: flex
+  align-items: center
+  transition: transform 700ms cubic-bezier(.73,.01,.5,.99) .3s, opacity 700ms cubic-bezier(.73,.01,.5,.99) .3s
+  +media-breakpoint-down(sm)
+    flex-direction: column
+  .slide-left
+    height: 100%
+    width: 65%
+    overflow: hidden
+    +media-breakpoint-down(sm)
+      width: 100%
+      height: 250px
+    .slider-image
+      width: 100%
+      height: 100%
+      transition: transform 700ms cubic-bezier(.73,.01,.5,.99)
+      object-fit: containe
+  .slide-right
+    height: 100%
+    width: 35%
+    padding: 30px 60px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: space-between
+    transition: transform 600ms cubic-bezier(.73,.01,.5,.99) .1s
+    +media-breakpoint-down(md)
+      padding: 30px 0 30px 60px
+    +media-breakpoint-down(sm)
+      width: 100%
+      height: auto
+      padding: 40px 0
+
+
+.slider-slide
+  &--previous
+    z-index: 0
+    transform: translateX(-200%)
+    opacity: 0
+    pointer-events: none
+  &--left
+    z-index: 1
+    transform: translateX(-100%)
+    cursor: pointer
+    .slide-left
+      .slider-image
+        transform: translateX(-20%)
+    .slide-right
+      transform: translateX(-20%)
+  &--active
+    z-index: 2
+  &--right
+    z-index: 1
+    transform: translateX(100%)
+    cursor: pointer
+    .slide-right
+      transform: translateX(20%)
+  &--next
+    transform: translateX(200%)
+    z-index: 0
+    opacity: 0
+    .slide-left
+      .slider-image
+        transform: translateX(20%)
+
+.test-slider--navigation
+  width: 100%
+  margin-top: 70px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  +media-breakpoint-down(sm)
+    margin-top: 0
+  &__left
+    width: 80%
+    +media-breakpoint-down(sm)
+      width: 100%
+    .test-slider--buttons__wrapper
+      width: 65%
+      display: flex
+      align-items: center
+      justify-content: space-between
+      +media-breakpoint-down(sm)
+        width: 100%
+  &__right
+    width: 20%
+    padding-right: 6vw
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +media-breakpoint-down(md)
+      padding-right: 0
+    +media-breakpoint-down(sm)
+      display: none
+
+
+.slide-header
+  width: 100%
+  .slide-case
+    font-size: 12px
+    letter-spacing: 0.08em
+    text-transform: uppercase
+    font-weight: 600
+    color: $black
+    +media-breakpoint-down(sm)
+      display: block
+      margin-bottom: 10px
+  .slide-info
+    margin-top: 40px
+    width: 100%
+    display: flex
+    align-items: stretch
+    justify-content: space-between
+    +media-breakpoint-down(sm)
+      display: none
+    &--item
+      width: 33.33%
+      .info-item--title
+        display: block
+        font-size: 12px
+        line-height: 22px
+        color: $gray-600
+        font-weight: 500
+      .info-item--value
+        display: block
+        font-size: 14px
+        line-height: 24px
+        color: $black
+
+.slide-footer
+  .h2
+    font-size: 28px
+    line-height: 32px
+    text-transform: uppercase
+    font-weight: 600
+    color: $black
+    +media-breakpoint-down(lg)
+      font-size: 17px
+      line-height: 22px
+  .slide-descr
+    display: block
+    font-size: 14px
+    line-height: 18px
+    font-weight: 500
+    color: $black
+    +media-breakpoint-down(lg)
+      font-size: 13px
+      line-height: 17px
+  .slide-link
+    display: inline-block
+    margin-top: 45px
+    position: relative
+    padding: 5px 0
+    overflow: hidden
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 1px
+      background: $gray-300
+      transform: translateX(-100%)
+      transition: transform 700ms cubic-bezier(.73,.01,.5,.99)
+    &::before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 1px
+      background: $black
+    .slide-link--wrapper
+      display: flex
+      align-items: center
+    .link-title
+      display: block
+      color: $black
+      font-size: 12px
+      line-height: 22px
+      letter-spacing: 0.04em
+      text-transform: uppercase
+      font-weight: 600
+      margin-right: 10px
+    .link-icon
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 11px
+      height: 11px
+      svg
+        display: block
+        width: 100%
+        height: 100%
+    &:hover
+      &::after
+        transform: translateX(100%)
+
+
+
+
+.test-slider--buttons
+  display: flex
+  align-items: center
+  justify-content: space-between
+  +media-breakpoint-down(sm)
+    width: 100%
+  .test-slider--button
+    font-size: 0px
+    width: 120px
+    height: 40px
+    display: flex
+    align-items: center
+    padding: 0
+    position: relative
+    svg
+      display: block
+      margin-top: 1px
+      path 
+        transition: all .25s cubic-bezier(1,.02,.42,.53)
+    &[disabled]
+      &::before
+        background: $gray-600
+      svg
+        path 
+          fill: $gray-600
+    &:hover
+      &::before
+        width: 50%
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      transform: translate(0, -50%, 0)
+      width: 100%
+      height: 1px
+      background: $black
+      transition: all 400ms cubic-bezier(.73,.01,.5,.99)
+    &__prev
+      justify-content: flex-start
+      margin-right: 20px
+      &::before
+        left: 2px
+    &__next
+      justify-content: flex-end
+      margin-left: 20px
+      &::before
+        right: 2px
+
+.current-count
+  color: $black
+  font-size: 13px
+  line-height: 20px
+  display: none
+
+.all-count
+  color: $gray-600
+  font-size: 13px
+  line-height: 20px
+  width: 40px
+
+.progress-wrapper
+  position: relative
+  width: 100%
+  height: 1px
+  background: $gray-500
+  margin: 0 15px
+  .progress
+    position: absolute
+    top: 0
+    left: 0
+    height: 1px
+    background: $black
+    transition: width .6s cubic-bezier(1,.02,.42,.53)
+
+.counter-wrapper
+  height: 20px
+  width: 40px
+  overflow: hidden
+  .counter-list
+    transition: transform 600ms cubic-bezier(.73,.01,.5,.99) .25s
+    &__item
+      height: 20px
+      line-height: 20px
+      color: $black
+      font-size: 13px
+  &.counter-wrapper__main
+    overflow: hidden
+    width: 40px
+
+.slider-scroll--down
+  font-size: 12px
+  text-transform: uppercase
+  font-weight: 600
+  color: $black
+  transition: color .3s ease-in-out
+  &:hover
+    color: $gray-600
+  +media-breakpoint-down(md)
+    display: none
+

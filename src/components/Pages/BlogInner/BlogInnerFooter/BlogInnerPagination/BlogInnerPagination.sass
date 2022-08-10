@@ -1,0 +1,98 @@
+.blog-inner__pagination
+  padding: 20px 0 200px 0
+  +media-breakpoint-down(md)
+    padding: 10px 0 70px
+
+.blog-inner__pagination-wrapper
+  display: flex
+  justify-content: space-between
+
+.blog-inner__link
+  display: flex
+  align-items: center
+  justify-content: space-between
+  font-size: 12px
+  color: $black
+  letter-spacing: 0.04em
+  text-transform: uppercase
+  font-weight: 600
+  position: relative
+  transition: all 400ms cubic-bezier(.73,.01,.5,.99)
+  +media-breakpoint-down(md)
+    flex-direction: column-reverse
+
+  .arrow__line
+    display: none
+
+  .blog-inner__arrow--reverse
+    display: flex
+    flex-direction: row-reverse
+
+  .blog-inner__arrow
+    position: relative
+    transition: all 400ms cubic-bezier(.73,.01,.5,.99)
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      display: block
+      transform: translate(0, -50%)
+      max-width: 140px
+      width: 100%
+      height: 1px
+      background: $black
+      transition: all 400ms cubic-bezier(.73,.01,.5,.99)
+      +media-breakpoint-down(xs)
+        max-width: 120px
+
+  .arrow-left, .arrow-right
+    transition: all 400ms cubic-bezier(.73,.01,.5,.99) .05s
+
+  &:hover
+    color: $black
+
+    // ! Отвечает за стрелки
+    .blog-inner__arrow::before
+      max-width: 120px
+
+    // ! Отвечает за текст
+    .arrow-left
+      transform: translateX(-35px)
+      +media-breakpoint-down(md)
+        transform: translateX(-10px)
+
+    .arrow-right
+      transform: translateX(35px)
+      +media-breakpoint-down(md)
+        transform: translateX(10px)
+
+  &:active
+    opacity: 0.7
+
+.blog-inner__link--right
+  flex-direction: row-reverse
+  +media-breakpoint-down(md)
+    flex-direction: column-reverse
+
+.arrow-left
+  margin-left: 40px
+  +media-breakpoint-down(md)
+    margin-left: 8px
+    margin-bottom: 35px
+  +media-breakpoint-down(xs)
+    margin-bottom: 20px
+    margin-left: 10px
+
+    // * Если отключить перенос текста margin-left: 0
+
+.arrow-right
+  margin-right: 40px
+  +media-breakpoint-down(md)
+    margin-right: 8px
+    margin-bottom: 35px
+    +media-breakpoint-down(xs)
+      text-align: right
+      margin-bottom: 20px
+      margin-right: 10px
+
+      // * Если отключить перенос текста margin-right: 0

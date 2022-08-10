@@ -1,0 +1,44 @@
+@import './CatalogItemAside/CatalogItemAside'
+@import './CatalogContent/CatalogContent'
+
+.pack-catalog__item
+  display: grid
+  grid-template-columns: 4fr 1fr 7fr
+  grid-template-areas: "a . b" 
+  gap: 50px
+  padding: 80px 0
+  border-top: 1px solid #dedede
+  @media screen and ( max-width: $page-wrapper )
+    gap: calc( 25px + (50 - 25) * ((100vw - 320px) / (1440 - 320)))
+  &:first-child
+    +media-breakpoint-down(md)
+      border-top: 1px solid #dedede
+  &:last-child
+    border-botton: 1px solid #dedede
+    +media-breakpoint-down(md)
+      border: none
+  +media-breakpoint-down(lg)
+    grid-template-columns: 4fr 8fr
+    grid-template-areas: "a b" 
+  +media-breakpoint-down(md)
+    grid-template-columns: 1fr
+    grid-template-areas: none
+    padding: 0
+    gap: 0
+    border-top: none
+
+
+.pack-catalog__item--column
+  &:first-child
+    grid-area: a
+    order: 1
+    +media-breakpoint-down(md)
+      grid-area: auto
+      order: 2
+      display: none
+  &:last-child
+    grid-area: b
+    order: 2
+    +media-breakpoint-down(md)
+      grid-area: auto
+      order: 1

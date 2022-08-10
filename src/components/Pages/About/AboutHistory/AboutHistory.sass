@@ -1,0 +1,33 @@
+
+
+.story__wrapper
+  padding: 0 25vw
+  +media-breakpoint-down(md)
+    padding: 0 6vw
+
+.story__marker
+  font-size: 12px
+  color: $gray-600
+  letter-spacing: 0.16em
+  margin-bottom: 80px
+  text-transform: uppercase
+  +media-breakpoint-down(md)
+    margin-bottom: 40px
+
+.story__count
+  margin-right: 10px
+
+.story
+  .markdown-components
+    &:last-of-type
+      margin-bottom: 0
+    p
+      font-size: 16px
+      line-height: 26px
+      color: $black
+      font-weight: 500
+      margin-bottom: 40px
+      &:last-child
+        margin-bottom: 0
+      +media-breakpoint-down(md)
+        margin-bottom: 30px

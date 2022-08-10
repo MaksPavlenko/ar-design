@@ -1,0 +1,93 @@
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'
+@import './config'
+
+/////////// Layout Style /////////
+
+@import '../components/Layout/layout'
+@import '../components/UI/ui'
+
+/////////// Pages Style /////////
+
+@import '../components/Pages/Home/Home'
+@import '../components/Pages/About/About'
+@import '../components/Pages/Services/Services'
+@import '../components/Pages/ServicesInner/ServicesInner'
+@import '../components/Pages/Portfolio/Portfolio'
+@import '../components/Pages/PortfolioInner/PortfolioInner'
+@import '../components/Pages/Blog/Blog'
+@import '../components/Pages/BlogInner/BlogInner'
+@import '../components/Pages/Contacts/Contacts'
+@import '../components/Pages/404/404'
+
+
+/////////// Main Style ///////////
+
+html
+  width: 100%
+  max-width: 100%
+  height: 100%
+  backface-visibility: hidden
+  
+body
+  position: relative
+  width: 100%
+  max-width: 100%
+  overflow-x: hidden
+  scroll-behavior: smooth
+  overscroll-behavior-y: none
+  font-smooth: antialiased
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-rendering: optimizeSpeed
+  -webkit-text-rendering: optimizeSpeed
+  font-family: $main-font
+  background: $gray-300
+  color: $black
+
+
+ul
+  padding: 0
+  margin: 0
+  li
+    list-style: none
+
+button
+  background-color: transparent
+  border: none
+  outline: none
+  &:focus, &:focus, &:active
+    outline: none
+
+a
+  outline: none
+  &:hover, &:focus, &:active
+    text-decoration: none
+
+
+p
+  margin: 0
+
+
+/////////// ANIMATION /////////
+
+.animate-overlay
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: $gray-300
+  z-index: 3
+
+.section-wrapper
+  width: 100%
+  max-width: 1920px
+  margin: 0 auto
+
+.default-section
+  padding: 90px 0
+  @media screen and ( max-width: $page-wrapper )
+    padding: calc( 40px + (90 - 40) * ((100vw - 320px) / (1440 - 320))) 0
+  
+

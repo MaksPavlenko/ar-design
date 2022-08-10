@@ -1,0 +1,35 @@
+$gap: calc( 30px + (60 - 30) * ((100vw - 320px) / (1440 - 320)))
+
+.home-services__footer
+  display: grid
+  grid-template-columns: 6fr 6fr
+  gap: 60px
+  @media screen and ( max-width: $page-wrapper )
+    gap: $gap
+  +media-breakpoint-down(sm)
+    grid-template-columns: 1fr
+    gap: 0
+    padding-top: 20px
+  // +media-breakpoint-down(xs)
+  //   gap: 0
+
+.home-services__footer--button
+  display: block
+  +media-breakpoint-down(sm)
+    margin-bottom: 20px
+    &:last-child
+      margin-bottom: 0
+    .default-button
+      padding: 20px 0
+      width: 100%
+      justify-content: center
+      background: $black
+      &::before, &::after
+        display: none
+      .default-button__title
+        font-size: 12px
+        color: $white
+      svg 
+        path 
+          fill: $white
+        

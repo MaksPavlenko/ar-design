@@ -1,0 +1,38 @@
+.main-screen__subtitle
+  color: $gray-600
+  font-size: 12px
+  font-weight: 600
+  display: inline-block
+  margin-bottom: 80px
+  text-transform: uppercase
+  +media-breakpoint-down(md)
+    margin-bottom: 40px
+  +media-breakpoint-down(sm)
+    margin-bottom: 20px
+
+.main-screen__title
+  color: $black
+  font-size: 44px
+  font-weight: 600
+  line-height: 110%
+  max-width: 75%
+  margin: 0
+  white-space: pre-wrap
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 24px + (44 - 24) * ((100vw - 320px) / (1440 - 320)))
+  +media-breakpoint-down(md)
+    white-space: normal
+  +media-breakpoint-down(sm)
+    max-width: 100%
+
+  
+
+.main-screen__header
+  padding-bottom: 120px
+  +media-breakpoint-down(md)
+    padding-bottom: 70px
+  +media-breakpoint-down(sm)
+    padding-bottom: 40px
+
+.main-screen__number
+  margin-right: 20px

@@ -1,0 +1,27 @@
+@import './DetailsCaseItem/DetailsCaseItem'
+@import './DetailsCaseHeader/DetailsCaseHeader'
+
+.details-wrapper
+  padding-bottom: 120px
+  +media-breakpoint-down(sm)
+    padding-bottom: 0
+
+
+.details-items__wrapper
+  overflow: hidden
+  border-bottom: 1px solid #dedede
+  transition: max-height 0.95s ease-in
+  +media-breakpoint-down(sm)
+    height: 0
+    max-height: 0px
+  &.is-show
+    height: 100%
+    max-height: none
+    transition: max-height 0.95s ease-in
+
+.details-items
+  display: grid
+  grid-template-columns: 6fr 6fr
+  +media-breakpoint-down(sm)
+    grid-template-columns: 1fr
+

@@ -1,0 +1,39 @@
+
+.default-slide__image--wrapper
+  width: 100%
+  @media screen and ( max-width: $page-wrapper )
+    height: calc( 240px + (420 - 240) * ((100vw - 320px) / (768 - 320))) !important
+
+
+.default-slide__info
+  display: grid
+  grid-template-columns: 4fr 2fr
+  padding: 30px 6vw
+
+
+.default-slide__marker--wrapper
+  text-align: right
+
+.default-slide__marker
+  display: block
+  font-size: 11px
+  line-height: 14px
+  font-weight: 600
+  text-transform: uppercase
+  color: $black
+
+
+.default-slide__title
+  font-size: 16px
+  line-height: 20px
+  font-weight: 600
+  text-transform: uppercase
+  color: $black
+  margin-bottom: 0
+
+.default-slide__descr
+  font-size: 14px
+  line-height: 20px
+  font-weight: 500
+  color: $gray-600
+

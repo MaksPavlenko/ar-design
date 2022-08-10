@@ -1,0 +1,31 @@
+@import './MainSlider/mainslider'
+@import './HomeMainMobile/HomeMainMobile'
+
+.main-screen_wrapper
+  width: 100%
+  padding: 16vh 0px 190px 6vw
+  overflow-x: hidden
+  background: $gray-300
+  position: relative
+  +media-breakpoint-down(md)
+    padding: 16vh 6vw 100px 6vw
+  +media-breakpoint-down(sm)
+    padding: 16vh 0 70px 0
+  +media-breakpoint-down(xs)
+    padding: 16vh 0 40px 0
+
+  .main-screen_header
+    margin-bottom: 60px
+    .main-screen_title
+      font-size: 48px
+      font-weight: 600
+      letter-spacing: 0.02em
+      +media-breakpoint-down(sm)
+        font-size: 34px
+        line-height: 44px
+      +media-breakpoint-down(xs)
+        font-size: 30px
+        line-height: 24px
+    +media-breakpoint-down(sm)
+      padding: 0 6vw
+      

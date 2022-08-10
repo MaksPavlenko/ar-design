@@ -1,0 +1,85 @@
+.blog__article
+  display: grid
+  grid-template-columns: 1fr 1fr // * Отвечает за кол-во колонок
+  grid-auto-flow: row // * В случае появления новых элементов, как будет появляться
+  grid-column-gap: 60px // * Расстояние между колонками
+  grid-row-gap: 100px // * Расстояние между рядами
+  +media-breakpoint-down(md)
+    grid-template-columns: 1fr
+    grid-row-gap: 60px
+
+.blog__article-image
+  object-fit: cover
+  height: 350px
+  transition: all 600ms cubic-bezier(.73,.01,.5,.99) .05s
+
+.blog__article-cover
+  position: relative
+  transition: all 400ms cubic-bezier(.73,.01,.5,.99) .05s
+  margin-bottom: 40px
+  object-fit: cover
+  .top-button
+    margin: 0
+  +media-breakpoint-down(md)
+    margin-bottom: 30px
+
+.blog__article-btn
+  transition: all 400ms cubic-bezier(.73,.01,.5,.99) .05s
+  opacity: 0
+  position: absolute
+  width: 100px
+  height: 100px
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  display: flex
+  align-items: center
+  justify-content: center
+
+.blog__article-pulse
+  position: relative
+  width: 100px
+  height: 100px
+  border-radius: 100%
+  &::before, &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border-radius: 100%
+    border: 1px solid $white
+  &::before
+    animation: pulse 2s ease-in-out infinite
+  &::after
+    animation: pulse 2s .6s ease-in-out infinite
+
+.blog__article-item
+  transition: all 400ms cubic-bezier(.73,.01,.5,.99) .05s
+  &:hover
+    .blog__article-image
+      filter: brightness(0.5) // * Отвечает за затемнение плашки
+    .blog__article-btn
+      opacity: 1
+  &:active
+    opacity: 0.8
+
+.blog__article-date
+  margin-bottom: 30px
+  font-size: 12px
+  color: $gray-600
+  letter-spacing: $letter-marker
+  display: block
+  text-transform: uppercase
+  +media-breakpoint-down(md)
+    margin-bottom: 20px
+
+.blog__article-title
+  font-size: 24px
+  line-height: 40px
+  color: $black
+  font-weight: 600
+  white-space: pre-line
+  +media-breakpoint-down(md)
+    white-space: normal

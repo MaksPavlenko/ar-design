@@ -1,0 +1,27 @@
+@import "./FooterBottom/FooterBottom"
+@import "./FooterMain/FooterMain"
+@import "./FooterMain/FooterContacts/FooterContacts"
+@import "./FooterMain/FooterSocial/FooterSocial"
+@import "./FooterMain/FooterButton/FooterButton"
+
+.footer
+    // background: $black
+    // color: $white
+    padding-top: 90px
+    @media screen and ( max-width: $page-wrapper )
+        padding-top: calc( 40px + (90 - 40) * ((100vw - 320px) / (1440 - 320)))
+
+.footer__wrapper
+    padding: 0 6vw
+    background: $black
+    color: $white
+
+.footer__link
+    color: $white
+    transition: all .3s ease-in-out
+    &:hover
+        color: $white
+    &:active
+        color: $gray-700
+
+    

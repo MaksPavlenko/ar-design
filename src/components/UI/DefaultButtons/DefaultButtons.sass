@@ -1,0 +1,99 @@
+.default-slider__button
+  padding: 5px 
+  
+.default-button
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  position: relative
+  width: fit-content
+  overflow: hidden
+  padding: 15px 0
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 1px
+    background: $black
+  &::after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 1px
+    background: #f1f1f1
+    transform: translateX(-100%)
+    transition: transform 700ms cubic-bezier(.73,.01,.5,.99)
+
+.default-button
+  @media (any-hover: hover)
+    &:hover
+      &::after
+        transform: translateX(100%)
+
+.default-button__icon--wrapper
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 10px
+  height: 10px
+  margin-left: 30px
+  transform: translateY(-1px)
+  svg
+    display: block
+    width: 10px
+    height: 10px
+
+.default-button__title
+  display: inline-block
+  font-size: 14px
+  line-height: 110%
+  font-weight: 600
+  text-transform: uppercase
+  color: $black
+
+////////// Plus Style ////////// 
+
+.accordion-icon
+  position: relative
+  display: block
+  width: 20px
+  height: 20px
+  transition: transform .3s ease-in-out
+  +media-breakpoint-down(xs)
+    width: 16px
+    height: 16px
+  .icon-line
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background: #202020
+    overflow: hidden
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: #f1f1f1
+      transition: transform .4s ease-in-out
+    &__1
+      width: 20px
+      height: 2px
+      +media-breakpoint-down(xs)
+        width: 16px
+      &::after
+        transform: translateX(100%)
+    &__2
+      width: 2px
+      height: 20px
+      +media-breakpoint-down(xs)
+        height: 16px
+      &::after
+        transform: translateY(100%)
+        transition-delay: .2s

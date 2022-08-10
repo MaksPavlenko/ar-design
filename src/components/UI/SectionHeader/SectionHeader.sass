@@ -1,0 +1,32 @@
+.section-header__marker
+  display: block
+  font-size: 12px
+  line-height: 1.2
+  font-weight: 600
+  text-transform: uppercase
+  letter-spacing: 0.16em
+  color: $gray-600
+  margin-bottom: 40px
+  &-count
+    margin-right: 20px
+  // +media-breakpoint-down(md)
+  //   margin-bottom: 40px
+  +media-breakpoint-down(xs)
+    margin-bottom: 20px
+    display: none
+
+.section-header__title
+  font-size: 36px
+  line-height: 110%
+  font-weight: 600
+  color: $black
+  white-space: pre-wrap
+  +media-breakpoint-down(lg)
+    font-size: 30px
+    // line-height: 44px
+  +media-breakpoint-down(xs)
+    font-size: 22px
+    // line-height: 24px
+    white-space: normal
+
+  

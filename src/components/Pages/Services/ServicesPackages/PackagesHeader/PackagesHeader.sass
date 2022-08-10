@@ -1,0 +1,32 @@
+.services-pack__header
+  display: grid
+  grid-template-columns: 5fr 7fr
+  gap: 100px
+  padding: 90px 0
+  @media screen and ( max-width: $page-wrapper )
+    padding: calc( 40px + (90 - 40) * ((100vw - 320px) / (1440 - 320))) 0
+    gap: calc( 50px + (100 - 50) * ((100vw - 320px) / (1440 - 320)))
+  +media-breakpoint-down(lg)
+    grid-template-columns: 4fr 8fr
+    gap: calc( 25px + (50 - 25) * ((100vw - 320px) / (1440 - 320)))
+  +media-breakpoint-down(md)
+    grid-template-columns: 1fr
+    gap: 0
+  +media-breakpoint-down(sm)
+    padding-top: 0
+
+.services-pack__header--descr
+  margin-top: 30px
+  font-size: 15px
+  line-height: 25px
+  font-weight: 400
+  width: 85%
+  color: #707070
+  +media-breakpoint-down(lg)
+    width: 100%
+  +media-breakpoint-down(md)
+    width: 70%
+  +media-breakpoint-down(sm)
+    width: 100%
+  +media-breakpoint-down(xs)
+    margin-top: 20px

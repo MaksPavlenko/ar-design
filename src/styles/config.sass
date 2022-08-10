@@ -1,0 +1,25 @@
+$black: #202020
+$white: #ffffff
+
+$gray-800: #6e6e6e
+$gray-700: #8e8e8e
+$gray-600: #909090
+$gray-500: #c2c2c2
+$gray-400: #d8d8d8
+$gray-300: #f1f1f1
+
+$main-font: 'Gilroy-example', sans-serif
+
+$letter-marker: 0.08em
+
+$page-wrapper: 1920px
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: local($fname), url($furl) format('woff')
+		// font-display: swap // Uncomment to initially display system fonts
+@include font('Gilroy-example', normal, 500, '../fonts/gilroy/Gilroy-Medium.woff2')
+@include font('Gilroy-example', normal, 600, '../fonts/gilroy/Gilroy-Semibold.woff2')

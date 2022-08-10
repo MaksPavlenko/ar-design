@@ -1,0 +1,23 @@
+export const blogStatic = {
+  crumbsNav: [
+    {
+      id: 1,
+      link: "/",
+      title_ua: "Головна",
+      title_ru: "Главная",
+      title_en: "Home",
+    },
+    {
+      id: 2,
+      link: "/blog/",
+      title_ua: "Блог",
+      title_ru: "Блог",
+      title_en: "Blog",
+    },
+  ],
+  blogHeader: {
+    title_ua: "Новини, цікаві статті \n та нагороди",
+    title_ru: "Новости, интересные статьи \n и награды",
+    title_en: "News, interesting articles \n and awards",
+  },
+};

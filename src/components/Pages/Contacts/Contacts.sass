@@ -1,0 +1,23 @@
+@import "./ContactsInfo/ContactsInfo"
+@import "./ContactsMap/ContactsMap"
+@import "./ContactsTitle/ContactsTitle"
+
+.contacts
+  padding: 200px 0 120px
+  +media-breakpoint-down(md)
+    padding: 120px 0 
+  +media-breakpoint-down(sm)
+    padding: 120px 0 0 0
+
+.contacts__wrapper
+  padding: 0 6vw
+  width: 100%
+  margin: 0 auto
+  max-width: 1920px
+
+.contacts__main
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+  +media-breakpoint-down(md)
+    flex-direction: column-reverse

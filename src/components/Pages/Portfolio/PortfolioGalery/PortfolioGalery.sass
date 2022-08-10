@@ -1,0 +1,42 @@
+@import './GalleryItem/GalleryItem'
+
+.portfolio-gallery
+  padding: 100px 0 170px 0
+  opacity: 0
+  +media-breakpoint-down(sm)
+    padding: 100px 0 0 0
+  .section-wrapper
+    padding: 0 !important
+
+.img-wrapper
+  display: grid
+  gap: 92px
+  grid-template-columns: 0.8fr 1.2fr
+  +media-breakpoint-down(lg)
+    gap: 40px
+  +media-breakpoint-down(md)
+    gap: 0px
+    grid-template-columns: repeat(auto-fill,minmax(470px,1fr))
+  +media-breakpoint-down(sm)
+    grid-template-columns: repeat(auto-fill,minmax(100%,1fr))
+  
+  .portfolio-item__image
+    width: 100%
+    height: 450px
+    object-fit: cover
+    +media-breakpoint-down(lg)
+      height: 400px
+    +media-breakpoint-down(md)
+      height: 450px
+    +media-breakpoint-down(sm)
+      height: 400px
+    +media-breakpoint-down(xs)
+      height: 300px
+
+  &.reverse
+    grid-template-columns: 1.2fr 0.8fr
+    +media-breakpoint-down(md)
+      grid-template-columns: repeat(auto-fill,minmax(470px,1fr))
+    +media-breakpoint-down(sm)
+      grid-template-columns: repeat(auto-fill,minmax(100%,1fr))
+    

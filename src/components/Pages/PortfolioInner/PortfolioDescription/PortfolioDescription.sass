@@ -1,0 +1,68 @@
+.project__item
+  display: grid
+  grid-template-columns: 1fr 2fr
+  +media-breakpoint-down(md)
+    grid-template-columns: 1fr 1fr
+
+.project__item--column
+  grid-template-columns: 1fr
+  grid-row-gap: 25px
+
+.project__item-name
+  font-size: 14px
+  color: $gray-600
+
+.project__item-key
+  font-weight: 600
+  font-size: 16px
+  line-height: 25px
+  +media-breakpoint-down(md)
+    font-size: 15px
+
+.project__item
+  padding: 35px 0
+  border-top: 1px solid $gray-500
+  &:last-child
+    border-bottom: 1px solid $gray-500
+
+.project__description-title
+  font-size: 12px
+  color: $gray-600
+  letter-spacing: 0.16em
+  font-weight: 600
+  text-transform: uppercase
+  margin-bottom: 80px
+  +media-breakpoint-down(md)
+    margin-bottom: 40px
+
+.project__description-number
+  display: inline-block
+  margin-right: 10px
+
+.project__description-container
+  display: flex
+  justify-content: space-between
+  padding-top: 120px
+  +media-breakpoint-down(md)
+    flex-direction: column
+    padding-top: 70px
+    justify-content: flex-start
+
+.project__description
+  width: 40%
+  +media-breakpoint-down(md)
+    width: 100%
+  .markdown-components
+    p
+      color: $black
+      font-size: 18px
+      line-height: 40px
+      font-weight: 500
+      +media-breakpoint-down(md)
+        font-size: 16px
+        line-height: 30px
+
+.project__object
+  width: 40%
+  +media-breakpoint-down(md)
+    width: 100%

@@ -1,0 +1,216 @@
+.image-carousel--wrapper
+  overflow-x: hidden
+  
+.image-carousel
+  width: 100%
+  max-width: 100%
+  height: 100%
+  min-height: 600px
+  max-height: 600px
+  position: relative
+  +media-breakpoint-down(md)
+    width: 100%
+    max-width: 100%
+  +media-breakpoint-down(sm)
+    max-height: auto
+    min-height: 400px
+    max-height: 400px
+
+.image-carousel__slide
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: space-between
+  transition: transform 700ms cubic-bezier(.73,.01,.5,.99) .3s, opacity 700ms cubic-bezier(.73,.01,.5,.99) .3s
+  +media-breakpoint-down(sm)
+    flex-direction: column
+  .slide-wrapper
+    height: 100%
+    width: 100%
+    // padding-right: 11%
+    overflow: hidden
+    // background: orange
+    +media-breakpoint-down(md)
+      padding: 0
+    +media-breakpoint-down(sm)
+      width: 100%
+    .slider-image
+      width: 100%
+      height: 100%
+      transition: transform 700ms cubic-bezier(.73,.01,.5,.99)
+  .slide-right
+    height: 100%
+    width: 35%
+    padding: 30px 60px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: space-between
+    transition: transform 600ms cubic-bezier(.73,.01,.5,.99) .1s
+    +media-breakpoint-down(md)
+      padding: 30px 0 30px 60px
+    +media-breakpoint-down(sm)
+      width: 100%
+      padding: 30px 0
+      height: auto
+
+
+.image-carousel__slide
+  &--previous
+    z-index: 0
+    transform: translateX(-200%)
+    opacity: 0
+    pointer-events: none
+  &--left
+    z-index: 1
+    transform: translateX(-100%)
+    // opacity: 0.7
+    cursor: pointer
+    .slide-left
+      .slider-image
+        transform: translateX(-20%)
+    .slide-right
+      transform: translateX(-20%)
+  &--active
+    z-index: 2
+  &--right
+    z-index: 1
+    transform: translateX(100%)
+    // opacity: 0.7
+    cursor: pointer
+    .slide-right
+      transform: translateX(20%)
+  &--next
+    transform: translateX(200%)
+    z-index: 0
+    opacity: 0
+    .slide-left
+      .slider-image
+        transform: translateX(20%)
+
+.image-carousel--navigation
+  width: 100%
+  margin-top: 70px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 0 14.5vw
+  +media-breakpoint-down(md)
+    padding: 0 6vw 0 6vw
+  +media-breakpoint-down(sm)
+    margin-top: 40px
+  &__left
+    width: 30%
+    +media-breakpoint-down(sm)
+      width: 100%
+    .image-carousel--buttons__wrapper
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: space-between
+      +media-breakpoint-down(sm)
+        width: 100%
+  &__right
+    width: 20%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +media-breakpoint-down(sm)
+      padding-right: 0
+    +media-breakpoint-down(sm)
+      display: none
+
+
+
+.image-carousel--buttons
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  +media-breakpoint-down(sm)
+    width: 100%
+  .image-carousel--button
+    font-size: 0px
+    width: 120px
+    height: 40px
+    display: flex
+    align-items: center
+    padding: 0
+    position: relative
+    svg
+      display: block
+      margin-top: 1px
+      path 
+        transition: all .25s cubic-bezier(1,.02,.42,.53)
+    &[disabled]
+      &::before
+        background: #909090
+      svg
+        path 
+          fill: #909090
+    &:hover
+      &::before
+        width: 50%
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      transform: translate(0, -50%, 0)
+      width: 100%
+      height: 1px
+      background: #202020
+      transition: all 400ms cubic-bezier(.73,.01,.5,.99)
+    &__prev
+      justify-content: flex-start
+      margin-right: 20px
+      &::before
+        left: 2px
+    &__next
+      justify-content: flex-end
+      margin-left: 20px
+      &::before
+        right: 2px
+
+
+.current-count
+  color: #202020
+  font-size: 13px
+  line-height: 20px
+  display: none
+
+.all-count
+  color: #909090
+  font-size: 13px
+  line-height: 20px
+
+.progress-wrapper
+  position: relative
+  width: 100%
+  height: 1px
+  background: #C2C2C2
+  margin: 0 15px
+  .progress
+    position: absolute
+    top: 0
+    left: 0
+    // width: 25%
+    height: 1px
+    background: #202020
+    transition: width .6s cubic-bezier(1,.02,.42,.53)
+
+.counter-wrapper
+  height: 20px
+  width: 30px
+  overflow-y: hidden
+  .counter-list
+    transition: transform 600ms cubic-bezier(.73,.01,.5,.99) .25s
+    &__item
+      height: 20px
+      line-height: 20px
+      color: #202020
+      font-size: 13px
+
+

@@ -1,0 +1,50 @@
+.filter
+  display: flex
+  padding-bottom: 16px
+  opacity: 0
+  +media-breakpoint-down(lg)
+    flex-direction: column
+  +media-breakpoint-down(md)
+    margin-top: 70px
+    flex-direction: row
+  +media-breakpoint-down(sm)
+    flex-direction: column
+    width: 100%
+    margin-top: 55px
+
+.filter__button
+  min-width: 130px
+  padding: 15px 30px
+  border: 1px solid $black
+  background: $gray-300
+  font-size: 12px
+  font-weight: 600
+  text-transform: uppercase
+  letter-spacing: 0.08em
+  transition: all .3s ease-in-out
+  +media-breakpoint-down(lg)
+    min-width: 200px
+  +media-breakpoint-down(md)
+    min-width: 130px
+  +media-breakpoint-down(sm)
+    width: 100%
+    display: block
+  &-active
+    background: $black
+    color: $white
+  &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4)
+    margin-left: -1px
+    +media-breakpoint-down(lg)
+      margin-left: 0
+      margin-top: -1px
+    +media-breakpoint-down(md)
+      margin-top: 0
+      margin-left: -1px
+    +media-breakpoint-down(sm)
+      margin-left: 0
+      margin-top: -1px
+
+  &:hover
+    background: $black
+    color: $white    
+    

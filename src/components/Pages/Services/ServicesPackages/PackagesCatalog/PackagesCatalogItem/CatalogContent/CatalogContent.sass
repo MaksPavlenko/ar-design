@@ -1,0 +1,112 @@
+
+.catalog-item__header
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  +media-breakpoint-down(md)
+    border-bottom: 1px solid #dedede
+    padding: 40px 0
+  +media-breakpoint-down(sm)
+    padding: 20px 0
+
+.catalog-item__header
+  .accordion-icon
+    transition: transform 0s ease-in-out
+  &.is-show
+    .accordion-icon
+      transform: rotate(135deg)
+      .icon-line
+        &::after
+          display: none
+
+.catalog-item__header--icon
+  display: none
+  +media-breakpoint-down(md)
+    display: block
+
+.catalog-item__header--info
+  text-align: left
+
+.catalog-item__header--marker
+  display: block
+  font-size: 14px
+  line-height: 20px
+  font-weight: 500
+  margin-bottom: 25px
+  color: #909090
+  +media-breakpoint-down(md)
+    margin-bottom: 10px
+  
+.catalog-item__header--title
+  display: block
+  font-size: 28px
+  line-height: 120%
+  font-weight: 600
+  @media screen and ( max-width: $page-wrapper )
+    font-size: calc( 16px + (28 - 16) * ((100vw - 320px) / (1440 - 320)))
+
+.catalog-item__list
+  padding: 60px 60px 0 0
+  +media-breakpoint-down(md)
+    padding: 30px 0
+    display: none
+    border-bottom: 1px solid #dedede
+  &.is-show
+    +media-breakpoint-down(md)
+      display: block
+    
+
+.catalog-list__item
+  margin-bottom: 20px
+  position: relative
+  padding-left: 25px
+  +media-breakpoint-down(md)
+    margin-bottom: 10px
+  &:last-child
+    margin-bottom: 0
+  &::before
+    content: ''
+    position: absolute
+    top: 9px
+    left: 0
+    width: 6px
+    height: 6px
+    background: $black
+    border-radius: 100%
+  &.catalog-list__item--sub
+    padding-left: 0
+    &::before
+      display: none
+
+.catalog-list__item--title
+  font-size: 15px
+  line-height: 26px
+  font-weight: 600
+  +media-breakpoint-down(xs)
+    font-size: 14px
+    line-height: 22px
+
+
+.catalog-sublist
+  padding: 6px 0 6px 16px
+
+.catalog-sublist__item
+  margin-bottom: 20px
+  padding-left: 11px
+  list-style-type: number
+  &:last-child
+    margin-bottom: 0
+  &::marker
+    font-size: 14px
+  +media-breakpoint-down(md)
+    margin-bottom: 10px
+
+.catalog-sublist__item--title
+  font-size: 15px
+  line-height: 26px
+  font-weight: 500
+  color: #707070
+  +media-breakpoint-down(xs)
+    font-size: 14px
+    line-height: 22px

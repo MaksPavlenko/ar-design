@@ -1,0 +1,46 @@
+.crumbs-nav__wrapper
+  padding: 90px 14.5vw
+  @media screen and ( max-width: $page-wrapper )
+    padding: calc( 40px + (90 - 40) * ((100vw - 320px) / (1440 - 320))) 14.5vw
+  +media-breakpoint-down(md)
+    padding: calc( 40px + (90 - 40) * ((100vw - 320px) / (1440 - 320))) 6vw
+  +media-breakpoint-down(sm)
+    display: none
+
+.crumbs-nav
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 25px 0
+  border-top: 1px solid $gray-500
+  border-bottom: 1px solid $gray-500
+
+.crumbs-nav__item
+  position: relative
+  padding: 0 12px
+  &::before
+    content: '-'
+    position: absolute
+    top: 50%
+    left: -3px
+    transform: translateY(-50%)
+    font-size: 12px
+    line-height: 12px
+    font-weight: 600
+    color: $black
+  &:first-child
+    &::before
+      display: none
+
+.crumbs-naw__item-link
+  text-transform: uppercase
+  font-size: 12px
+  font-weight: 600
+  color: $gray-600
+  transition: color .3s ease-in-out
+  &[aria-current="page"]
+    color: $black
+  &:hover
+    color: $black
+    &[aria-current="page"]
+      color: $gray-600

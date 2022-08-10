@@ -1,0 +1,91 @@
+.footer__bottom
+	padding: 40px 0
+	position: relative
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		background: $gray-800
+		width: 100%
+		height: 1px
+	+media-breakpoint-up(md) 
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		padding: 40px 0
+
+.footer__svg
+	width: 50px
+
+.footer__political-text
+	color: $gray-600
+	font-size: 14px
+	line-height: 25px
+	+media-breakpoint-up(sm)
+		margin-right: 20px
+		font-size: 13px
+
+.footer__buttom-links
+	display: flex
+	align-items: center
+	+media-breakpoint-down(md)
+		margin-top: 15px
+	+media-breakpoint-down(sm)
+		margin-left: 0
+	+media-breakpoint-down(xs)
+		flex-direction: column
+		align-items: flex-start
+		margin-top: 15px
+
+
+.footer__buttom-link
+	font-size: 14px
+	line-height: 24px
+	font-weight: 500
+	color: $gray-500
+	position: relative
+	margin-right: 20px
+	transition: all .3s ease-in-out
+	&:hover
+		color: $gray-600
+		&::before
+				background: $gray-600
+	&::before, &::after
+		content: ""
+		height: 12px
+		width: 1px
+		position: absolute
+		left: -10px
+		top: 50%
+		transform: translateY(-50%)
+		background: $gray-500
+		transition: all .3s ease-in-out
+		+media-breakpoint-down(md)
+			display: none
+	&::after
+		left: auto
+		right: -10px
+	&:first-child
+		&::after
+			display: none
+
+
+.footer__political
+	+media-breakpoint-up(lg)
+		display: flex
+
+.footer__created
+	display: flex
+	align-items: center
+	transition: opacity .3s ease-in-out
+	+media-breakpoint-down(sm)
+		margin-top: 15px
+	&:hover
+		opacity: 0.5
+
+.footer__created-title
+	font-size: 12px
+	color: $gray-600
+	font-weight: 500
+	

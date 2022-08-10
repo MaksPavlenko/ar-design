@@ -1,0 +1,29 @@
+.languages-mobile
+  display: none
+  pointer-events: auto
+  +media-breakpoint-down(md)
+    display: block
+  li 
+    display: inline-block
+    margin-right: 25px
+    &:last-child
+      margin-right: 0
+    a 
+      position: relative
+      font-size: 12px
+      font-weight: 600
+      letter-spacing: 0.04em
+      text-transform: uppercase
+      color: $white
+      padding-bottom: 6px
+      &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 0px
+        height: 1px
+        background: $white
+      &[aria-current="page"]
+        &::after
+          width: 100%
