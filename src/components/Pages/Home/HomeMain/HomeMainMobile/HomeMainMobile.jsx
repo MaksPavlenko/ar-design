@@ -50,6 +50,7 @@ const HomeMainMobile = ({ dataSlider }) => {
             number={item.project_number}
             img={item.main_image.localFile}
             link={fromPortfolioSlugToUrl(item.slug)}
+            award={item.award}
           />
         );
       })}

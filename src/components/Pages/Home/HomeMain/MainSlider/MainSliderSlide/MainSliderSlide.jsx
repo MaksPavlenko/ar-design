@@ -5,19 +5,11 @@ import { Link } from 'gatsby-plugin-react-i18next';
 import { fromPortfolioSlugToUrl } from '../../../../../../utils/slug';
 import ArrowLink from '../../../../../../svg/arrowlinkblack.svg';
 import useLanguage from '../../../../../../hooks/useLanguage';
-// import Award from '../../../../../../svg/aword.svg';
+import Award from '../../../../../UI/Award/Award';
 
 const MainSliderSlide = ({ slideClasses, slide, index }) => {
   const langToggle = useLanguage;
   const image = getImage(slide.main_image.localFile);
-
-  // const AwardBlock = () => {
-  //   return (
-  //     <div className="portfolio-item__aword">
-  //       <Award className="aword" />
-  //     </div>
-  //   );
-  // };
 
   return (
     <div
@@ -26,13 +18,12 @@ const MainSliderSlide = ({ slideClasses, slide, index }) => {
     >
       <div className="slide-left">
         <Link to={fromPortfolioSlugToUrl(slide.slug)} className="slide-link">
-          {/* {slide.award === true ? <AwardBlock /> : null} */}
-
           <GatsbyImage
             image={image}
             className="slider-image"
             alt={slide.project_name_ru}
           />
+          {slide.award === true && <Award />}
         </Link>
       </div>
       <div className="slide-right">

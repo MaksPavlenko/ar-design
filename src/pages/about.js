@@ -282,6 +282,7 @@ export const aboutQuery = graphql`
         sub_title_en
         project_number
         slug
+        award
         main_image {
           localFile {
             childImageSharp {

@@ -3,6 +3,7 @@ require('dotenv').config({
 });
 
 const { languages, defaultLanguage } = require('./languages');
+const siteUrl = `https://www.ar-design.uk/`;
 const myCustomQueries = {
   xs: '(max-width: 576px)',
   sm: '(max-width: 768px)',
@@ -17,6 +18,7 @@ module.exports = {
     title: `AR-Design`,
     description: `AR Design — Архитектор ваших идей, семейная компания супругов Анны и Евгения Разумовых. Дизайн интерьера, проектирование, авторский надзор и строительство под ключ. ✓ Киев, Украина ☎ 097 887 66 55`,
     author: `@erikdils`,
+    siteUrl: siteUrl,
   },
   flags: {
     PRESERVE_WEBPACK_CACHE: true,
@@ -80,7 +82,7 @@ module.exports = {
         languages: languages,
         defaultLanguage: defaultLanguage,
         // if you are using Helmet, you must include siteUrl, and make sure you add http:https
-        siteUrl: `https://ar-design.com.ua`,
+        siteUrl: siteUrl,
         // you can pass any i18next options
         i18nextOptions: {
           interpolation: {

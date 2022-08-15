@@ -9,6 +9,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ArrowLeft from '../../../svg/left.svg';
 import ArrowRight from '../../../svg/right.svg';
 import { fromPortfolioSlugToUrl } from '../../../utils/slug';
+import Award from '../Award/Award';
 
 const CasesSlider = ({
   dataPortfolio,
@@ -162,6 +163,7 @@ const CasesSlider = ({
                             className="slider-image"
                             alt={slide.project_name_ru}
                           />
+                          {slide.award === true && <Award />}
                         </div>
                         <div className="slide-right">
                           <ul className="slide-info">

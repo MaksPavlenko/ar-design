@@ -1,0 +1,14 @@
+.award-wrapper
+  position: absolute
+  bottom: 0
+  right: 0
+  padding: 10px
+  background: rgba(#000, .30)
+
+
+.award-icon
+  width: 120px
+  height: auto
+  display: block
+  @media screen and ( max-width: $page-wrapper )
+    width: calc( 70px + (120 - 70) * ((100vw - 320px) / (1440 - 320)))

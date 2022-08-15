@@ -3,8 +3,18 @@ import { Link } from 'gatsby-plugin-react-i18next';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 // import PropTypes from 'prop-types';
 
-export const DefaulSlideLink = ({ img, title, link, description, number }) => {
+import Award from '../Award/Award';
+
+export const DefaulSlideLink = ({
+  img,
+  title,
+  link,
+  description,
+  number,
+  award,
+}) => {
   const image = getImage(img);
+  // console.log(award);
   return (
     <div className="default-slide__wrapper">
       <Link to={link} className="default-slide__link">
@@ -15,6 +25,7 @@ export const DefaulSlideLink = ({ img, title, link, description, number }) => {
             alt={title}
             loading="eager"
           />
+          {award === true && <Award />}
         </div>
         <div className="default-slide__info">
           <div className="default-slide__info--wrapper">
