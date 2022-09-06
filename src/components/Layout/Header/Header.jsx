@@ -10,8 +10,8 @@ import {
   LanguagesDesctop,
   LanguagesMobile,
 } from './index';
-import LogoDesctop from '../../../svg/logo.svg';
-import LogoMobile from '../../../svg/logo-mobile.svg';
+import LogoDesctop from '../../../svg/logo_ua.svg';
+import LogoMobile from '../../../svg/logo_ua_sm.svg';
 
 const Header = ({ dataNav, dataContacts }) => {
   const [open, setOpen] = React.useState(false);

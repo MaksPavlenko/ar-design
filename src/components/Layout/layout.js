@@ -12,6 +12,7 @@ import Footer from './Footer/Footer';
 import navigationData from '../../db/navigationData';
 
 import DecorRight from '../../svg/decor_right.svg';
+// import Fixed from './Fixed/Fixed';
 
 const Layout = ({ children }) => {
   const dataNav = navigationData;
@@ -82,6 +83,7 @@ const Layout = ({ children }) => {
           <div className="decor-right" ref={(e) => (decorEl = e)}>
             <DecorRight />
           </div>
+          {/* <Fixed /> */}
           <Header dataNav={dataNav} dataContacts={data.strapiContacts} />
           <main>{children}</main>
           {/* <MediaQuery minWidth={574}> */}
