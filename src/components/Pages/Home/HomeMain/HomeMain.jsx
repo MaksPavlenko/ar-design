@@ -48,11 +48,16 @@ const HomeMain = ({ dataMain, dataSlider, mainSlide }) => {
             )}
           </h1>
         </header>
-        {breakpoints.sm ? (
+
+        <HomeMainMobile dataSlider={filtSlides} />
+
+        <MainSlider dataSlider={filtSlides} />
+
+        {/* {breakpoints.sm ? (
           <HomeMainMobile dataSlider={filtSlides} />
         ) : (
           <MainSlider dataSlider={filtSlides} />
-        )}
+        )} */}
         {/* <MediaQuery minWidth={768}>
           <MainSlider dataSlider={dataSlider} />
         </MediaQuery>

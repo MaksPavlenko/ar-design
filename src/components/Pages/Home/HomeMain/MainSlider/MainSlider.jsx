@@ -68,7 +68,7 @@ const MainSlider = ({ dataSlider }) => {
   }
 
   return (
-    <section className="about-test">
+    <section className="about-test custom-slider">
       <div className="test-slider--wrapper" ref={(e) => (sliderEl = e)}>
         <div className="slide-overlay" ref={(e) => (overlayEl = e)}></div>
         <div className="test-slider">
