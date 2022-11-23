@@ -91,17 +91,17 @@ module.exports = {
           keySeparator: false,
           nsSeparator: false,
         },
-        // pages: [
-        //   {
-        //     matchPath: "/:lang?/blog/:uid",
-        //     getLanguageFromPath: false,
-        //     excludeLanguages: ["en"],
-        //   },
-        //   {
-        //     matchPath: "/preview",
-        //     languages: ["en"],
-        //   },
-        // ],
+        pages: [
+          {
+            matchPath: '/:lang?/blog/:uid',
+            getLanguageFromPath: false,
+            excludeLanguages: ['en'],
+          },
+          {
+            matchPath: '/preview',
+            languages: ['en'],
+          },
+        ],
       },
     },
     // {
