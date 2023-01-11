@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { useBreakpoint } from 'gatsby-plugin-breakpoints';
+// import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import useLanguage from '../hooks/useLanguage';
@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => {
   const dataHomecontacts = data.strapiContacts;
 
   const langToggle = useLanguage;
-  const breakpoints = useBreakpoint();
+  // const breakpoints = useBreakpoint();
 
   let fadeY = React.useRef([]);
   fadeY.current = [];
@@ -111,9 +111,12 @@ const IndexPage = ({ data }) => {
             fadeOver: fadeOverlayRefs,
           }}
         />
-        {breakpoints.sm ? null : (
+        {/* {breakpoints.sm ? null : (
           <Video cover={dataHomePage.cover_image} url={dataHomePage.video} />
-        )}
+        )} */}
+        <div className="home-video__container">
+          <Video cover={dataHomePage.cover_image} url={dataHomePage.video} />
+        </div>
         <HomeServices
           services={homeData.services}
           markerCount={'02'}
@@ -144,9 +147,13 @@ const IndexPage = ({ data }) => {
           )}
           ref={fadeYRefs}
         />
-        {breakpoints.sm ? null : (
+        {/* {breakpoints.sm ? null : (
           <Quote quotes={dataHomePage.quotes} ref={fadeYRefs} />
-        )}
+        )} */}
+
+        <div className="home-quote__container">
+          <Quote quotes={dataHomePage.quotes} ref={fadeYRefs} />
+        </div>
 
         <Feedback
           markerCount={'05'}
