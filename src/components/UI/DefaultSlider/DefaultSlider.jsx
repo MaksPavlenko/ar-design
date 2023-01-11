@@ -58,6 +58,7 @@ const DefaultSlider = React.forwardRef((props, ref) => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
+    lazyLoad: true,
     afterChange: (index) => {
       handleAfterChange(index);
     },
